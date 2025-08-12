@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Chuyển hướng...</title>
+<script>
+    // Link Shopee affiliate của bạn
+    const shopeeLink = "https://s.shopee.vn/8pbWYptS3X"; 
+    // Link chính của bạn
+    const mainLink = "https://chatgpt.com/c/689a1254-7260-832a-a43a-9222018d266a";
+
+    // Kiểm tra xem user đã bấm trước đó chưa
+    if (!localStorage.getItem("clickedBefore")) {
+        // Nếu chưa bấm -> chuyển sang Shopee
+        localStorage.setItem("clickedBefore", "true");
+        window.location.href = shopeeLink;
+    } else {
+        // Nếu đã bấm -> chuyển sang web chính
+        window.location.href = mainLink;
+    }
+</script>
+</head>
+<body>
+<p>Đang chuyển hướng...</p>
+</body>
+</html>
